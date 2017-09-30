@@ -1,3 +1,32 @@
-<h1>Air Payments</h1>
+<nav class="navbar navbar-fixed-top navbar-light bg-faded">
+  <div class="container-fluid navbar__inner">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      {{#link-to 'index' class="navbar-brand"}}
+        AIR
+      {{/link-to}}
+    </div> <!-- navbar-header -->
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+         {{#link-to 'index' class="nav-link"}}
+            Stuff
+          {{/link-to}}
+        </li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  
+  </div><!-- /.container-fluid -->
+</nav>
+
 
 {{outlet}}
