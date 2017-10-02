@@ -1,0 +1,43 @@
+              
+
+    <div class="table__header"><h3>TRANSACTIONS</h3></div>
+
+    <ol>
+        {{#each recentTransactions as |transaction|}}
+        <li>
+            <div class="table__block"><strong>ID: </strong>{{transaction.id}}</div>
+            <div class="table__block">
+                {{#if transaction.source_account.isPending}}
+                {{else}}
+                    <strong>Source Account:</strong> {{transaction.source_account}}
+                {{/if}}
+                
+            </div>
+
+            <div class="table__block--signature-header"><strong>Signatures</strong></div>
+                {{#each transaction.signatures as |signer|}}
+                    <div class="table__block">{{signer}}</div>
+                {{/each}}
+
+                <table>
+                    <tr>
+                        <th>Ledger</th>
+                        <th>Operations</th>
+                        <th>Fee</th>
+                        <th>Age</th>
+                    </tr>
+
+                    <tr>
+                        <td>{{transaction.ledger}}</td>
+                        <td>{{transaction.operation_count}}</td>
+                        <td>{{div transaction.fee_paid 10000000}} XLM</td>
+                        <td>{{moment-from-now transaction.created_at }}</td>
+                </tr>
+                </table>
+        </li>
+        {{/each}}
+    </ol>
+    
+
+
+

@@ -1,21 +1,59 @@
 /*=======================================================
-TEXT/FONTS
+TEXT/FONTS/COLORS
 =======================================================*/
+$black: #585858;
+$light-black: #848484;
+$white: #ffffff;
+$light-gray: #f9f9f9;
+$gray: #a4a4a4;
+$light-blue: #D4EEF7;
 
-.playfair{
-    font-family: 'Playfair Display', serif !important;
-  }
-  
-$playfair: 'Playfair Display', serif !important;
-
-.roboto{
-font-family: 'Roboto', sans-serif;
+.roboto{  
+  font-family: 'Roboto', sans-serif;
 }
 
 $roboto:'Roboto', sans-serif;
 
-.open-sans{
-font-family: 'Open Sans', sans-serif;
+h1{
+  font-weight: 100;
+  font-size:40px;
+  line-height:32px;
+  color:$black;
+  display:inline-block;
+  letter-spacing: 0.04em;
 }
 
-$open-sans:'Open Sans', sans-serif;
+    
+
+h4{
+  color:$black;
+  display:block;
+  border-bottom: 1px solid $light-blue;
+  padding-bottom:15px;
+  margin-bottom: 20px !important;
+}
+
+h5{
+  color:$black;
+  font-size:16px;
+}
+
+p{
+  font-weight:100;
+  letter-spacing: 0.04em;
+  color:$black;
+  display:block;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+hr{
+  margin:0px;
+  margin-bottom: 20px;
+}
+
+
+
+
