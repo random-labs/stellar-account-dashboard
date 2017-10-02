@@ -1,8 +1,7 @@
 $rowHeight: 50px;
 
 ol{
-    width:900px;
-    min-width:700px;
+    min-width:500px;
     display:block;
     margin:auto;
     padding: 20px 0px;
@@ -21,8 +20,7 @@ ol{
     text-align:center;
     border: 5px solid $white;
     border-radius: 5px;
-    width:900px;
-    min-width:700px;
+    min-width:500px;
     margin:auto;
     color:$white;
     font-weight:900;
@@ -41,12 +39,16 @@ ol{
     font-size: 16px;
     letter-spacing: 0.06em;
     font-weight:100;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
 }
 
 .table__block--signature-header{
     @extend .table__block;
     border-bottom:none !important;
-    height:25px;
+    height:35px;
 }
 
 
@@ -58,6 +60,10 @@ table{
         background-color: $white;
         width:25%;
         text-align:center;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
     }
 
     th{
