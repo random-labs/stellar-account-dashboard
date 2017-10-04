@@ -3,30 +3,12 @@
 @import "ember-bootstrap/bootstrap";
 @import "text";
 @import "index";
-@import "table";
+@import "account";
 
 main{
     min-height:100vh;
     padding-top: 1vh;
     background-color: $light-blue;
 }
-
-#accountNumber{
-    text-align:center;
-    
-}
-
-.section__container{
-    padding:5vh 2%;
-}
-
-section{
-    background-color: $white;
-    border:1px solid #f2f2f2;
-    border-radius: 3px;
-    padding:20px;
-    margin-bottom:20px;
-}
-
 
 

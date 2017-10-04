@@ -1,12 +1,12 @@
 <main class="container-fluid">
-    <div id="accountNumber" class="row"><h2>{{accountData.account_id}}</h2></div>
-    <div class="row">
+    <div class="row main__inner--account">
         <div class="col-lg-4 section__container">
             <section>
                 <h4>Balances</h4>
                     {{#each accountData.balances as |balanceObj|}}
                         {{#if (eq balanceObj.asset_type "native")}}
-                            <h5>Lumens (XLM): {{div balanceObj.balance 10000000}} </h5>
+                            <h5>Lumens (XLM) </h5>
+                            <p>{{div balanceObj.balance 10000000}}</p>
                         {{else}}
                             <h5>Ryan: {{balanceObj.balance}}</h5>
                         {{/if}}
@@ -16,22 +16,21 @@
                 <h4>Account Information</h4>
                  
                 <h5>Current Transaction Sequence #</h5>
-                <p>{{accountData.sequence}}</p><hr>
+                <p>{{accountData.sequence}}</p>
 
-                <h5>Entries (used for minimum required balance)</h5>
-                <p>{{accountData.subentry_count}}</p><hr>
+                <h5>Entries</h5>
+                <p>{{accountData.subentry_count}}</p>
 
                 <h5>Signers</h5>
                 {{#each accountData.signers as |signer|}}
                     <p>{{signer.public_key}}</p>
                     <p>Weight of {{signer.weight}}</p>
-                {{/each}}<hr>
+                {{/each}}
                 
                 <h5>Flags on the account</h5>
                 {{#each-in accountData.flags as |flag boolean|}}
                     <p>{{flag}}? {{boolean}}</p>
-                {{/each-in}}
-                <hr>
+                {{/each-in}}         
 
                  <h5>Thresholds</h5>
                   {{#each-in accountData.thresholds as |threshold amount|}}
@@ -42,6 +41,9 @@
         </div>
         
         <div class="col-lg-8 section__container"> 
+             <div id="accountNumber" class="row">
+                 <h5>{{accountData.account_id}}</h5>
+            </div>
             {{ember-table-wrapper recentTransactions=transactions}}
         </div>
 

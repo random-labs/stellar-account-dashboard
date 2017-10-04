@@ -1,29 +1,60 @@
 $rowHeight: 50px;
 
+.main__inner--account{
+    max-width:1000px;
+    margin:auto;
+}
+
+
+#accountNumber{
+    @extend section;
+    text-align:center;
+    padding:10px;
+    @include wrapOverflow;
+    padding:0px 10px;
+}
+
+.section__container{
+    padding:5vh 2% 0px 0px;
+}
+
+section{
+    background-color: $white;
+    border:1px solid #f2f2f2;
+    border-radius: 3px;
+    padding:20px;
+    margin-bottom:20px;
+    white-space: wrap;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+
+}
+
+
 ol{
-    min-width:500px;
     display:block;
     margin:auto;
     padding: 20px 0px;
     color:$black;
+    background-color:$white;
 
     li{
-        border:2px solid $light-gray;
+        border-bottom:2px solid $light-black;
         border-radius:5px;
         margin-bottom:20px;
         background-color:$white;
         padding:0px 2px 30px 0px;
+
+        p{
+            text-align:center;
+        }
     }
 }
 
 .table__header{
-    text-align:center;
-    border: 5px solid $white;
-    border-radius: 5px;
-    min-width:500px;
-    margin:auto;
-    color:$white;
-    font-weight:900;
+    background-color: $white;
+    padding:10px 20px;
+    border-radius:5px;
 
     h3{
         margin-top:10px;
@@ -32,17 +63,12 @@ ol{
 }
 
 .table__block{
-    height: $rowHeight;
     border-bottom:1px solid $light-gray;
-    line-height:$rowHeight;
-    padding:0px 20px;
+    padding:10px 20px 0px 20px;
     font-size: 16px;
     letter-spacing: 0.06em;
     font-weight:100;
-    overflow: hidden;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
+    @include wrapOverflow;
 }
 
 .table__block--signature-header{
@@ -54,7 +80,7 @@ ol{
 
 table{
     width:100%;
-    margin-top:10px;
+    margin-top:20px;
     
     tr, th, .table__block{
         background-color: $white;

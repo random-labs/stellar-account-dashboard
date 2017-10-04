@@ -5,11 +5,22 @@
       <h1 id="headerText">Enter your stellar account's public key</h1>
       {{input id="enterAccount" type="text" value=accountNumber change="updateAccountNumber" placeholder="e.g. GBKBXKR6HUU6TNGEH2TECKZBOYLG5L2I2QUB7JRBSVCAK4QA13FXD25W"}}
 
-      {{#if accountNumber}}
+     
+
+      {{#if accountNumberLongEnough}}
         {{#link-to 'account' accountNumber id="seeAccountDetails"}}See Account Details{{/link-to}}
       {{/if}}
-    
+
+       <aside>
+          <a href="https://www.stellar.org/">Not sure what this is?</a><br>
+          <p>Here's an example you can copy and paste</p>
+          <hr>
+          <h6>GCEZWKCA5VLDNRLN3RPRJMRZOX3Z6G5CHCGSNFHEYVXM3XOJMDS674JZ</h6>
+          <hr>
+       </aside>
+      
+    {{log accountNumberLongEnough}}
     </div>
-  </div><!-- /.container-fluid -->
+  </div><!-- /.container-flui2d -->
 </main>
 

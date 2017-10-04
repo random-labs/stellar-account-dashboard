@@ -1,45 +1,52 @@
+@mixin centerEverything{
+  display:block;
+  margin:auto;
+  text-align:center;
+}
+
 main{
-  background-color:$white;
+  background-color:$light-blue;
   border-radius:0px !important;
   border-bottom:1px solid $light-gray !important;
 
-  .main__inner{
-      max-width: 1200px;
-      padding-top:10vh;
+
+  .main__inner--index{
+      max-width: 1000px;
+      width:90%;
+      padding-top:20vh;
+      @include centerEverything;
   }
 
   #headerText{
-    display:block !important;
-    text-align:center;
+    font-size:24px;
     width:100%;
+    font-weight:400;
   }
 
   #seeAccountDetails{
-    display:block;
-    margin:auto;
-    max-width:500px;
-    background-color: #22CBD1;
+    max-width:200px;
+    @include centerEverything;
+    background-color: #07a2cc;
     color:$white;
-    text-align:center;
-    height:60px;
-    font-size:20px;
-    line-height:58px;
-    margin-top:50px;
+    height:40px;
+    font-size:16px;
+    line-height:40px;
+    margin-top:30px;
+    padding:0px 10px;
     border-radius:5px;
-    -webkit-box-shadow: 0px 10px 24px -6px rgba(164,164,164,1);
-    -moz-box-shadow: 0px 10px 24px -6px rgba(164,164,164,1);
-    box-shadow: 0px 10px 24px -6px rgba(164,164,164,1);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), inset 0 -1px 0 rgba(0,0,0,0.08);
   }
 
   #enterAccount{
-    display:block;
-    height:70px;
-    margin-top:50px;
+    @include centerEverything;
+    height:50px;
+    margin-top:20px;
     border-radius: 3px;
-    border:1px solid #f2f2f2;
-    width:100%;
-    font-size:26px;
-    font-weight:400;
+    border:1px solid $gray;
+    width:95%;
+    max-width:550px;
+    font-size:14px;
+    font-weight:100;
     padding:0px 20px;
     color:$black;
   }
@@ -63,6 +70,24 @@ main{
     font-style: italic;
     letter-spacing:0.03em;
     font-weight:100;
+  }
+
+  aside{
+    @include centerEverything;
+    margin-top:30px;
+    line-height:1.8;
+  }
+
+  hr{
+    width:80%;
+    @include centerEverything;
+    margin-bottom:20px;
+    margin-top:20px;
+  }
+
+  h6{
+    font-weight:100;
+    font-size:10px;
   }
 }
 
