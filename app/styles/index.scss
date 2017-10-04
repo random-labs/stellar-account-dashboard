@@ -1,8 +1,4 @@
-@mixin centerEverything{
-  display:block;
-  margin:auto;
-  text-align:center;
-}
+
 
 main{
   background-color:$light-blue;
@@ -13,7 +9,7 @@ main{
   .main__inner--index{
       max-width: 1000px;
       width:90%;
-      padding-top:20vh;
+      padding-top:20vh !important;
       @include centerEverything;
   }
 

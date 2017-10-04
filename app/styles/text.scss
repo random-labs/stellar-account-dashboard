@@ -18,6 +18,12 @@ $blue: #07a2cc;
   overflow-wrap: break-word;
 }
 
+@mixin centerEverything{
+  display:block;
+  margin:auto;
+  text-align:center;
+}
+
 .roboto{  
   font-family: 'Roboto', sans-serif;
 }
@@ -31,7 +37,7 @@ h1{
   color:$black;
   display:inline-block;
   letter-spacing: 0.04em;
-  @include wrapOverflow;
+  @include centerEverything;
 }
 
     
